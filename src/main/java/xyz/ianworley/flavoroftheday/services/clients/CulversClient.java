@@ -15,7 +15,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 
 @Component
-public class CulversClient {
+public class CulversClient implements CulversClientInterface {
     private final RestClient restClient;
     private final URI culversUrl = new URI("https://web.culvers.com/api/locator/getLocations");
 

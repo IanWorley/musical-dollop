@@ -3,14 +3,14 @@ package xyz.ianworley.flavoroftheday.services;
 import org.springframework.shell.table.*;
 import org.springframework.stereotype.Service;
 import xyz.ianworley.flavoroftheday.model.IceCream;
-import xyz.ianworley.flavoroftheday.services.clients.CulversClient;
+import xyz.ianworley.flavoroftheday.services.clients.CulversClientInterface;
 
 @Service
 public class CulverFlavorOfTheDay implements FlavorOfTheDayProvider{
 
-    private final CulversClient culversClient;
+    private final CulversClientInterface culversClient;
 
-    public CulverFlavorOfTheDay(CulversClient culversClient){
+    public CulverFlavorOfTheDay(CulversClientInterface culversClient){
         this.culversClient = culversClient;
 
     }
